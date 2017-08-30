@@ -70,7 +70,7 @@ view_ex_report_duration        bigint(20)     (NULL)           YES             (
                 str2 += "    const FN_"+f0t1[0].toUpperCase()+" = '"+f0t1[0]+"';\n";
                 str3 += "        self::FN_"+f0t1[0].toUpperCase()+" => '"+typeConvert1(f0t1[1])+"',\n";
             });
-            wx('#code').val(str);
+            wx('#code').val(wx.fn.rtrim(str));
             wx('#code2').val(str2+"\n    protected $casts = [\n"+str3+"    ];\n");
         }});
     })();
